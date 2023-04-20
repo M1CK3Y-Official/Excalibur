@@ -4,11 +4,15 @@ header {
 }
 
 .login-page {
-height: 90vh;
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(5, 1fr);
-
+    height: 90vh;
+    display: grid;
+  /* grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, auto); */
+  grid-template-areas: "existing register";
+  /* display: flex; */
+  gap: 10em;
+  align-items: center;
+  justify-content: center;
 }
 
 h3 {
@@ -16,12 +20,13 @@ h3 {
 }
 
 .existing {
-
+    grid-area: 'existing';
 }
 
 .login {
     font-size: 2.5rem;
-    padding: 0.5em 0.5em;
+    padding: 0.5em;
+    width: 30vw;
     border-radius: 25rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -29,29 +34,33 @@ h3 {
     outline: none;
     background-color: red;
     border: 2px black solid;
+    text-align: center;
+    margin: 0 auto;
 }
+
 
 
 
 .newuser {
-
+    max-width: 1000px;
 }
 
 .register {
     display: grid;
-    /* justify-content: flex-end; */
     gap: 2em;
 
+    grid-area: 'register';
+    height: 30vh;
 }
 
 input {
-    width: 35vw;
+    width: 30vw;
 }
 
 
 input[type=email] {
     font-size: 2.5rem;
-    padding: 0.5em 0.5em;
+    padding: 0.5em;
     border-radius: 25rem;
     text-transform: uppercase;
     font-weight: 500;
