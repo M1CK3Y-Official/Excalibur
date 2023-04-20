@@ -7,17 +7,59 @@ padding: 0;
 /* ===== BASE SITE CSS END ===== */
 
 section {
-    width: 100%;
-        height: 10000px;
+        height: 9900px;
         background-image: url('/img/excalibur.png');
         background-size: contain;
         background-repeat: no-repeat;
+      }
+      
+
+      main{
+        background-image: url(/img/maxresdefault.jpg);
+        background-size: cover;
+        backdrop-filter: blur(100px);
       }
 
       header{
         width: 100%;
         height: 100vh;
-        background-color: white;
+        /* background-color: white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(12.5px);
+      }
+
+      .grid-template{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-news{
+        margin-top: 200px;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.505);
+        padding: 50px;
+      }
+
+      .buttons{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+      }
+
+      .grid-template a{
+        background-color: red;
+        color: blue;
+        font-size: 4rem;
+        padding: 0.5em;
+        border-radius: 25rem;
+        text-decoration: none;
+      }
+
+      p{
+        font-size: clamp(1rem, 0.5146rem + 2.0712vw, 3rem);
       }
 
       canvas {
@@ -25,4 +67,12 @@ section {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        box-shadow: 5 5 10 black;
+      }
+
+      .castle{
+        position: absolute;
+        bottom: -822.5%;
+        width: 110%;
+        left: 0;
       }
