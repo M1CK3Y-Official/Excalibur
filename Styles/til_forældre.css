@@ -1,0 +1,134 @@
+/*Defult settings*/
+/*===============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+header {
+    min-height: 10vh;
+    background-color: rgb(43, 43, 43);
+}
+footer {
+    min-height: 60vh;
+    background-color: rgb(43, 43, 43);
+}
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+/*===============================*/
+.doc-header-bg {
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+/*Right Block*/
+/*===============================*/
+.doc-right-block-bg {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+}
+@media only screen and (max-width: 600px) {
+    .doc-right-block-bg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .doc-right-block-bg div {
+        width: 100%;
+    }
+
+}
+.doc-right-block-title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+.doc-right-block-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 250px;
+    -webkit-line-clamp: 12;
+    overflow: hidden;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+/*Image Banner Block*/
+/*================================*/
+.doc-img-banner-bg {
+    margin: 1rem;
+
+}
+.doc-img-banner-bg img {
+    max-height: 300px;
+    display: block;
+}
+/*Role Block*/
+/*================================*/
+.doc-role-block-bg {
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doc-role-card-bg {
+    padding: 1rem 1rem 6rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.doc-role-card {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: slategray solid 2px;
+}
+.doc-role-card-img-bg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.2rem;
+    justify-items: stretch;
+    align-items: start;
+}
+.doc-role-card-img-1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 1;
+}
+.doc-role-card-img-4 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 2;
+}
+.doc-role-card-img-bg img {
+    height: 34px;
+}
+/* imagw ↑  text ↓ */
+/*--------------------------------*/
+.doc-role-card-text p{
+    font-size: 1rem;
+}
+.doc-role-card-text :first-child {
+    font-size: 1.4rem;
+    -webkit-box-orient: vertical;
+    max-width: 80px;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+/*================================*/
