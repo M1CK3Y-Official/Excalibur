@@ -1,5 +1,3 @@
-
-
 header {
     background-color: red;
     height: 10vh;
@@ -8,13 +6,10 @@ header {
 .login-page {
     height: 90vh;
     display: grid;
-  /* grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, auto); */
-  grid-template-areas: "existing register";
-  /* display: flex; */
-  gap: 10em;
-  align-items: center;
-  justify-content: center;
+    grid-template-areas: "existing register";
+    gap: 10em;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {
@@ -38,13 +33,15 @@ h3 {
     border: 2px black solid;
     text-align: center;
     margin: 0 auto;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 
-
-
 .newuser {
-    /* max-width: 1000px; */
     height: 50vh;
     display: grid;
     place-content: center;
@@ -53,7 +50,6 @@ h3 {
 .register {
     display: grid;
     gap: 2em;
-
     grid-area: 'register';
     height: 30vh;
     justify-content: center;
@@ -71,37 +67,18 @@ input {
     outline: none;
     background-color: red;
     border: 2px black solid;
+    color: black;
 }
 
-
-input[type=email] {
-    background-color: #666;
-}
-
-input[type=password] {
-    font-size: 2.5rem;
-    padding: 0.5em 0.5em;
-    border-radius: 25rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    background-color: red;
-    border: 2px black solid;
+input[type=email], input[type=password] {
+    background-color: #fff;
 }
 
 input[type=submit] {
-    font-size: 2.5rem;
-    padding: 0.5em 0.5em;
-    border-radius: 25rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    background-color: red;
-    border: 2px black solid;
+    color: white;
 }
 
-input::placeholder {
-    color: #ffffffaa;
+input[type=submit]:hover {
+    background-color: rgb(175, 0, 0);
+    cursor: pointer;
 }
