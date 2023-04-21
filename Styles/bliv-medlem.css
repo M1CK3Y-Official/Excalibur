@@ -1,19 +1,30 @@
 header {
     background-color: red;
     height: 10vh;
+    max-width: 100%;
 }
 
 .login-page {
     height: 90vh;
     display: grid;
-    grid-template-areas: "existing register";
-    gap: 10em;
+    grid-template-areas: 
+    "existing"
+    "register";
     align-items: center;
     justify-content: center;
 }
 
+button {
+    display: flex;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+}
+
 h3 {
     font-size: 5rem;
+    text-align: center;
 }
 
 .existing {
@@ -23,7 +34,7 @@ h3 {
 .login {
     font-size: 2.5rem;
     padding: 0.5em;
-    width: 30vw;
+    width: 100%;
     border-radius: 25rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -36,15 +47,12 @@ h3 {
     color: white;
 }
 
-button:hover {
-    cursor: pointer;
-}
-
 
 .newuser {
     height: 50vh;
     display: grid;
     place-content: center;
+    width: 100%;
 }
 
 .register {
@@ -57,7 +65,7 @@ button:hover {
 }
 
 input {
-    width: 30vw;
+    width: 70vw;
     font-size: 2.5rem;
     padding: 0.5em 0.5em;
     border-radius: 25rem;
@@ -78,7 +86,25 @@ input[type=submit] {
     color: white;
 }
 
-input[type=submit]:hover {
-    background-color: rgb(175, 0, 0);
-    cursor: pointer;
+
+
+@media screen and (min-width: 768px) {    
+    .login-page {
+        grid-template-areas: "existing register";
+        gap: 10em;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(175, 0, 0);
+    }
+    
+    input {
+        width: 30vw;
+    }
+    
+    input[type=submit]:hover {
+        background-color: rgb(175, 0, 0);
+        cursor: pointer;
+    }
 }
