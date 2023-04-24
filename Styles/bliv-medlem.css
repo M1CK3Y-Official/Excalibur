@@ -4,6 +4,17 @@ header {
     max-width: 100%;
 }
 
+.logo-container {
+    height: 10vh;
+    aspect-ratio: 1/1;
+    margin: 0 2.5em;
+}
+
+.logo {
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
 .login-page {
     height: 90vh;
     display: grid;
