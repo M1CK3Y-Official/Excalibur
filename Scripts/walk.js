@@ -34,3 +34,5 @@ function animateSprite() {
   // Gentag animationen
   requestAnimationFrame(animateSprite);
 }
+
+
