@@ -1,0 +1,65 @@
+header {
+    background-color: red;
+    height: 10vh;
+    max-width: 100%;
+}
+
+.logo-container {
+    height: 10vh;
+    aspect-ratio: 1/1;
+    margin: 0 2.5em;
+}
+
+.logo {
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.medlem {
+    display: grid;
+    text-align: center;
+    place-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.profil {
+    border: 5px solid black;
+    /* padding: 5em; */
+    aspect-ratio: 1/1;
+    display: block;
+    position: relative;
+}
+
+.fa-user {
+    font-size: 50rem;
+    padding: 5rem 5rem 0 5rem;
+    color: #c8c8c8;
+}
+
+.fa-pen {
+    font-size: 3.5rem;
+    margin: 0.25em;
+    position: absolute;
+    right: 0;  
+    color: #686868;
+    background-color: #c8c8c8bf;
+    padding: 0.5em;
+    max-width: 100px;
+    border-radius: 25rem;
+}
+
+.navn-container {
+    border: 5px solid black;
+    border-top: none;
+    padding: 1em;
+}
+
+
+
+
+@media screen and (min-width: 768px) {    
+    
+}
