@@ -8,10 +8,10 @@ export const newsTemplate = (newsItem) => `<article>
 
 // Fuld artikle
 export const newsArtikle = (newsItem) => `<article>
-        <h3>${newsItem.title}</h3>
-        <h4>${newsItem.underline}</h4>
+        <h1>${newsItem.title}</h1>
+        <h3>${newsItem.underline}</h3>
         <p class="date">${newsItem.date}</p>
-        <img src="${newsItem.headerImg}" alt="${newsItem.imgAlt}">
+        <img src="${newsItem.headerImg}" alt="${newsItem.imgAlt}" class="headerImg">
         <p>${newsItem.text}</p>
         <p>${newsItem.text}</p>
     </article>`
