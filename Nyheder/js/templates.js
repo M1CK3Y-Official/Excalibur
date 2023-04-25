@@ -1,14 +1,17 @@
-export const productPreview = (product) => `<div>
-    <img src="${product.image}"></img>
-    <h1>${product.title}</h1>
-    <p>${product.description}</p>
-    <span>Author:${product.author} </span>
-    <div><a href="product.html?id=${product.id}">Gå til produkt</a></div>
-</div>`
+// Preview template
+export const newsTemplate = (newsItem) => `<article>
+    <h3>${newsItem.title}</h3>
+    <p>${newsItem.date}</p>
+    <img src="${newsItem.headerImg}" alt="${newsItem.imgAlt}">
+    <div><a href="Nyhed.html?id=${newsItem.id}">Læs mere</a></div>
+</article>`
 
-export const productTmpl = (product) => `<div>
-    <img src="${product.image}"></img>
-    <h1>${product.title}</h1>
-    <p>${product.description}</p>
-    <span>Author:${product.author} </span>
-</div>`
+// Fuld artikle
+export const newsArtikle = (newsItem) => `<article>
+        <h3>${newsItem.title}</h3>
+        <h4>${newsItem.underline}</h4>
+        <p class="date">${newsItem.date}</p>
+        <img src="${newsItem.headerImg}" alt="${newsItem.imgAlt}">
+        <p>${newsItem.text}</p>
+        <p>${newsItem.text}</p>
+    </article>`
