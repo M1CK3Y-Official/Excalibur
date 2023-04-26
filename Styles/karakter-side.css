@@ -27,3 +27,22 @@ main{
     grid-template-columns: 1fr;
 }
 
+.udstyr{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.headline{
+    border: 2.5px solid black;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.grid-area div{
+   height: 300px;
+   width: 300px;
+    background-color: red;
+    margin-top: 50px;
+}
