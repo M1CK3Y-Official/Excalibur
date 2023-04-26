@@ -8,7 +8,7 @@
 
 .top {
   height: 8620px;
-  background-image: url("/img/excalibur-top.png");
+  background-image: url("../img/excalibur-top.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
@@ -17,7 +17,7 @@
 
 .bottom {
   height: 1290px;
-  background-image: url("/img/excalibur.bottom2.png");
+  background-image: url("../img/excalibur.bottom2.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 .grid-area div {
-  background-image: url(/img/chest.png);
+  background-image: url("../img/chest.png");
   width: 183px;
   height: 217px;
   display: flex;
