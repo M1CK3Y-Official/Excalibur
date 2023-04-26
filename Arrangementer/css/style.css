@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+h1{
+    font-size: 7.5rem;
+}
+h2{
+    font-size: 6rem;
+}
+h3{
+    font-size: 4.5rem;
+}
+h4{
+    font-size: 3rem;
+}
+h5{
+    font-size: 2.5rem;
+}
+h6{
+    font-size: 1.6rem;
+}
+p{
+    font-size: 2rem;
+}
+a{
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(204, 37, 37);
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+a:hover{
+    background-color: rgb(117, 19, 19);
+}
+body{
+    background-color: rgb(233, 233, 233);
+}
+
+
+
+
+h1{
+    text-align: center;
+    padding: 50px 0;
+}
+.item-container{
+    display: flex;
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.item-container article{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    position: relative;
+}
+.item-container article div{
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    left: 0px;
+
+    padding: 10px 15px 25px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+
+    /* border: solid 2px black; */
+}
+
+
+
+.arrangement-page h1{
+    padding: 50px 0 10px;
+    text-align: left;
+}
+.product-container{
+    background-color: rgb(255, 255, 255);
+
+    padding: 0 50px;
+
+    height: max-content;
+   
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.headerImg{
+    object-fit: cover;
+    width: 100%;
+}
+.join-button{
+    padding: 20px 0;
+}
+
+
+/* Visual of join button */
+.join-button.active a:first-child{
+    display: none;
+}
+.join-button.active a:last-child{
+    display: inline;
+}
+/* Login display */
+.join-button a:first-child{
+    display: inline;
+}
+.join-button a:last-child{
+    display: none;
+}
+.join-button a.true{
+    background-color: rgb(45, 204, 37);
+}
