@@ -1,0 +1,29 @@
+header{
+    height: 10vh;
+    background-color: red;
+}
+
+header img{
+    height: 10vh;
+    margin: 0 2.5em;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.profilpic{
+    border: 2.5px solid black;
+}
+
+.strength{
+    margin-top: 1em;
+}
+
+.grid-template{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
