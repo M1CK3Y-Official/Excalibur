@@ -36,3 +36,24 @@ function animateSprite() {
 }
 
 
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+var imageContainer = document.querySelector(".image-container");
+var image = document.querySelector(".image-container img");
+
+window.addEventListener("scroll", function (event) {
+  if (isElementInViewport(imageContainer)) {
+    image.style.transform = "translateX(-160%)";
+    
+  }
+});
+
