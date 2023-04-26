@@ -29,6 +29,7 @@ header {
     text-align: center;
     place-content: center;
     min-height: auto;
+    grid-area: 'medlem';
 }
 
 h1 {
@@ -38,7 +39,7 @@ h1 {
 }
 
 .profil {
-    border: 5px solid black;
+    border: 2.5px solid black;
     aspect-ratio: 1/1;
     display: block;
     position: relative;
@@ -63,7 +64,7 @@ h1 {
 }
 
 .navn-container {
-    border: 5px solid black;
+    border: 2.5px solid black;
     border-top: none;
     padding: 1em;
 }
@@ -71,10 +72,13 @@ h1 {
 .edit {
     padding: 0.5em;
     background-color: red;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight:700;
     color: white;
+    outline: none;
+    border: none;
     margin-bottom: 2.5em;
+    border-radius: 25rem;
 }
 
 .medlem-info {
@@ -82,10 +86,15 @@ h1 {
 }
 
 .info {
-    text-align-last: left;
+    /* text-align-last: left; */
+    display: grid;
+    gap: 0.25em;
+    font-size: 2rem;
 }
 
-
+.sec-2 {
+    grid-area: 'events';
+}
 
 .news-container {
     display: grid;
@@ -94,15 +103,15 @@ h1 {
 }
 
 .nyheder {
-    border: 5px solid black;
-    padding: 1em 5em;
+    border: 2.5px solid black;
+    padding: 0.4em 2.5em;
     text-align: center;
-    max-width: 27.5rem;
+    width: 27.5rem;
     margin: 0 auto;
 }
 
 .nyheder h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .box-container {
@@ -110,11 +119,11 @@ h1 {
     gap: 2.5em;
     width: 50rem;
     place-content: center;
-    margin-top: 2.5em;
+    margin-top: 1em;
 }
 
 .box {
-    border: 5px solid black;
+    border: 2.5px solid black;
     width: 10em;
     height: 20rem;
 }
@@ -123,7 +132,7 @@ h1 {
 .events-container {
     display: grid;
     justify-content: center;
-    margin-top: 2.5em;
+    margin-top: 5em;
     grid-template-areas: 
     ". news .",
     "box box box";
@@ -131,15 +140,18 @@ h1 {
 }
 
 .events {
-    border: 5px solid black;
-    padding: 1em 5em;
+    border: 2.5px solid black;
+    padding: 0.4em 2.5em;
     text-align: center;
-    max-width: 27.5rem;
+    width: 27.5rem;
     margin: 0 auto;
 }
 
 .events h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tilmeld {
@@ -152,8 +164,8 @@ h1 {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: #ddd;
-    color: black;
+    background-color: red;
+    color: white;
     outline: none;
     border: none;
     padding: 0.25em;
@@ -163,97 +175,71 @@ h1 {
 }
 
 .signedup {
-    background-color: red;
-    color: white;
+    background-color: #ddd;
+    color: black;
 }
 
 
 .box-e {
-    border: 5px solid black;
+    border: 2.5px solid black;
     width: 10em;
     height: 20rem;
     position: relative;
 }
 
 
-@media screen and (min-width: 768px) {    
+@media screen and (min-width: 768px) {        
     .fa-pen:hover {
         filter: brightness(0.5);
         cursor: pointer;
+        outline: 2.5px solid black;
     }
     
-    .profil {
-        border: 5px solid black;
-        /* padding: 5em; */
-        aspect-ratio: 1/1;
-        display: block;
-        position: relative;
-    }
-    .medlem {
-        display: grid;
-        text-align: center;
-        place-content: center;
-        min-height: auto;
-        grid-area: 'medlem';
-    }
-
-    .sec-2 {
-        grid-area: 'events';
-        /* margin-top: 4.75em; */
-    }
-
     main {
         display: grid;
         grid-template-areas: 
         "medlem events";
     }
-    
-    .fa-user {
-        /* font-size: 50rem; */
-        font-size: clamp(25rem, 18.932rem + 25.89vw, 50rem);
-        padding: 5rem 5rem 0 5rem;
-        color: #c8c8c8;
-    }
-    
-    .fa-pen {
-        /* font-size: 3.5rem; */
-        font-size: clamp(1.5rem, 1.0146rem + 2.0712vw, 3.5rem);
-        margin: 0.25em;
-        position: absolute;
-        right: 0;  
-        color: #686868;
-        background-color: #c8c8c8bf;
-        padding: 0.5em;
-        max-width: 100px;
-        border-radius: 25rem;
-    }
-    
-    
-    
-    .navn-container {
-        border: 5px solid black;
-        border-top: none;
-        padding: 1em;
-    }
-    
+
     .edit {
-        padding: 0.5em;
-        background-color: red;
-        border-radius: 25rem;
-        color: white;
+        text-align: center;
+        width: 100%;
         margin-top: 1em;
+    }
+    .edit:hover {
+        background-color: #af0000;
     }
     
     .medlem-info {
         margin-top: 2em;
     }
     
-    .info {
-        text-align-last: left;
+    .info p {
+        display: flex;
+        justify-content: space-between;
+        border: 2.5px solid black;   
     }
-    
-    
-    
+
+    .info p b {
+        padding-left: 0.5em;
+    }
+
+    .info-container {
+        display: grid;
+        gap: 1em;
+    }
+
+    .info p span {
+        width: 50%;
+        text-align: left;
+        background-color: #ddd;
+        outline: 2.5px solid black;
+        padding: 0 0.5em;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+
     .news-container {
         display: grid;
         justify-content: center;
@@ -261,83 +247,27 @@ h1 {
         ". news .",
         "box box box";
     }
-    
-    .nyheder {
-        border: 5px solid black;
-        padding: 1em 5em;
-        text-align: center;
-        max-width: 27.5rem;
-        margin: 0 auto;
-    }
-    
-    .nyheder h3 {
-        font-size: 1.5rem;
-    }
-    
+
     .box-container {
         display: grid;
         grid-template-areas: "box box box";
-        gap: 2.5em;
-        width: 50rem;
-        place-content: center;
-        margin-top: 2em;
     }
-    
-    .box {
-        border: 5px solid black;
-        width: 10em;
-        height: 20rem;
-    }
-    
     
     .events-container {
         display: grid;
         justify-content: center;
-        margin-top: 2em;
+        /* margin-top: 5em; */
         grid-template-areas: 
         ". news .",
         "box box box";
     }
-    
-    .events {
-        border: 5px solid black;
-        padding: 1em 5em;
-        text-align: center;
-        max-width: 27.5rem;
-        margin: 0 auto;
+
+    .signup:hover {
+        background-color: #af0000;
+        cursor: pointer;
     }
-    
-    .tilmeld {
-        display: flex;
-        align-items: flex-end;
+
+    .signedup:hover {
+        background-color: #aaa;
     }
-    
-    .signup {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: #ddd;
-        color: black;
-        outline: none;
-        border: none;
-        padding: 0.25em;
-        font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-    }
-    
-    .signedup {
-        background-color: red;
-        color: white;
-    }
-    
-    
-    .box-e {
-        border: 5px solid black;
-        width: 10em;
-        height: 20rem;
-        position: relative;
-    }
-    
 }
