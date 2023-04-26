@@ -78,8 +78,10 @@ h1{
 
 
 
+/* SINGLE page */
+
 .arrangement-page h1{
-    padding: 50px 0 10px;
+    padding: 0 0 10px;
     text-align: left;
 }
 .product-container{
@@ -97,6 +99,15 @@ h1{
     object-fit: cover;
     width: 100%;
 }
+.product-container article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0 0 0;
+}
+.date{
+    padding-bottom: 10px;
+}
+
 .join-button{
     padding: 20px 0;
 }
