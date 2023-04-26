@@ -1,3 +1,8 @@
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 header {
     background-color: red;
     height: 10vh;
@@ -38,7 +43,9 @@ h1 {
 .fa-user {
     /* font-size: 50rem; */
     font-size: clamp(25rem, 18.932rem + 25.89vw, 50rem);
+    /* font-size: clamp(5rem, -5.9223rem + 46.6019vw, 50rem); */
     padding: 5rem 5rem 0 5rem;
+    /* padding: 0.5em 0.5em 0 0.5em; */
     color: #c8c8c8;
 }
 
@@ -66,9 +73,10 @@ h1 {
 .edit {
     padding: 0.5em;
     background-color: red;
-    border-radius: 25rem;
+    font-size: 1.5rem;
+    font-weight: 500;
     color: white;
-    margin-top: 1em;
+    margin-bottom: 2.5em;
 }
 
 .medlem-info {
@@ -84,9 +92,11 @@ h1 {
 .news-container {
     display: grid;
     justify-content: center;
-    grid-template-areas: 
+    width: 100%;
+    /* overflow: hidden; */
+    /* grid-template-areas: 
     ". news .",
-    "box box box";
+    "box box box"; */
 }
 
 .nyheder {
@@ -103,7 +113,7 @@ h1 {
 
 .box-container {
     display: grid;
-    grid-template-areas: "box box box";
+    /* grid-template-areas: "box box box"; */
     gap: 2.5em;
     width: 50rem;
     place-content: center;
@@ -124,6 +134,7 @@ h1 {
     grid-template-areas: 
     ". news .",
     "box box box";
+    margin-bottom: 2.5em;
 }
 
 .events {
@@ -134,7 +145,7 @@ h1 {
     margin: 0 auto;
 }
 
-.nyheder h3 {
+.events h3 {
     font-size: 1.5rem;
 }
 
@@ -177,4 +188,150 @@ h1 {
         filter: brightness(0.5);
         cursor: pointer;
     }
+    
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    .profil {
+        border: 5px solid black;
+        /* padding: 5em; */
+        aspect-ratio: 1/1;
+        display: block;
+        position: relative;
+    }
+    
+    .fa-user {
+        /* font-size: 50rem; */
+        font-size: clamp(25rem, 18.932rem + 25.89vw, 50rem);
+        padding: 5rem 5rem 0 5rem;
+        color: #c8c8c8;
+    }
+    
+    .fa-pen {
+        /* font-size: 3.5rem; */
+        font-size: clamp(1.5rem, 1.0146rem + 2.0712vw, 3.5rem);
+        margin: 0.25em;
+        position: absolute;
+        right: 0;  
+        color: #686868;
+        background-color: #c8c8c8bf;
+        padding: 0.5em;
+        max-width: 100px;
+        border-radius: 25rem;
+    }
+    
+    
+    
+    .navn-container {
+        border: 5px solid black;
+        border-top: none;
+        padding: 1em;
+    }
+    
+    .edit {
+        padding: 0.5em;
+        background-color: red;
+        border-radius: 25rem;
+        color: white;
+        margin-top: 1em;
+    }
+    
+    .medlem-info {
+        margin-top: 2em;
+    }
+    
+    .info {
+        text-align-last: left;
+    }
+    
+    
+    
+    .news-container {
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        ". news .",
+        "box box box";
+    }
+    
+    .nyheder {
+        border: 5px solid black;
+        padding: 1em 5em;
+        text-align: center;
+        max-width: 27.5rem;
+        margin: 0 auto;
+    }
+    
+    .nyheder h3 {
+        font-size: 1.5rem;
+    }
+    
+    .box-container {
+        display: grid;
+        grid-template-areas: "box box box";
+        gap: 2.5em;
+        width: 50rem;
+        place-content: center;
+        margin-top: 2.5em;
+    }
+    
+    .box {
+        border: 5px solid black;
+        width: 10em;
+        height: 20rem;
+    }
+    
+    
+    .events-container {
+        display: grid;
+        justify-content: center;
+        margin-top: 2.5em;
+        grid-template-areas: 
+        ". news .",
+        "box box box";
+    }
+    
+    .events {
+        border: 5px solid black;
+        padding: 1em 5em;
+        text-align: center;
+        max-width: 27.5rem;
+        margin: 0 auto;
+    }
+    
+    .tilmeld {
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .signup {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #ddd;
+        color: black;
+        outline: none;
+        border: none;
+        padding: 0.25em;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+    
+    .signedup {
+        background-color: red;
+        color: white;
+    }
+    
+    
+    .box-e {
+        border: 5px solid black;
+        width: 10em;
+        height: 20rem;
+        position: relative;
+    }
+    
 }
