@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/general.css">
-    <link rel="stylesheet" href="../styles/add-news.css">
+    <link rel="stylesheet" href="../styles/add-events.css">
     <script src="https://kit.fontawesome.com/d3366c6752.js" crossorigin="anonymous"></script>
-    <title>Tilføj Nyhed - Excalibur</title>
+    <title>Tilføj Arrangementer - Excalibur</title>
 </head>
 <body>
     <header>
@@ -16,13 +16,13 @@
         </div>
     </header>
 
-    <h1 class="headline">Tilføj Nyheder</h1>
+    <h1 class="headline">Tilføj Arrangementer</h1>
 
     <main>
 
         <section class="admin-panel">
-            <div class="news-container">
-                <div class="nyheder">
+            <div class="events-container">
+                <div class="events">
                     <h3>Rediger</h3>
                 </div>
                 <div class="box-container">
@@ -36,9 +36,14 @@
 
             <div class="content-container">
                 <input type="text" placeholder="Titel..." class="text"></input>
+                
+                <div class="date-container">
 
-                <p class="date-label">Dato</p>
-                <input type="date" class="date"></input>
+                    <p class="date-label">Dato</p>
+                    <input type="date" id="dato" class="date"></input>
+                    <p class="date-label">Sidste tilmelding</p>
+                    <input type="date" id="dato" class="date"></input>
+                </div>
 
                 <form>    
                     <textarea class="textarea" cols="30" rows="10" placeholder="Tekst..."></textarea>

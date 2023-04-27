@@ -29,14 +29,14 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-.news-container {
+.events-container {
     display: grid;
     justify-content: center;
     width: 100%;
     margin-bottom: 5em;
 }
 
-.nyheder {
+.events {
     border: 2.5px solid ;
     padding: 0.4em 2.5em;
     text-align: center;
@@ -46,13 +46,15 @@ h1 {
     margin-bottom: 1em;
 }
 
-.nyheder h3 {
+.events h3 {
     font-size: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--white);
 }
+
+
 
 .box-container {
     display: grid;
@@ -139,6 +141,10 @@ h1 {
     font-size: clamp(1rem, 0.6359rem + 1.5534vw, 2.5rem);
     display: flex;
     color: grey;
+}
+
+.date:first-of-type {
+    margin-bottom: 0.5em;
 }
 
 .textarea {

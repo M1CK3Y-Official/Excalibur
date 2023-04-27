@@ -4,7 +4,7 @@ body{
 }
 
 header {
-    background-color: red;
+    background-color: var(--red);
     height: 10vh;
     max-width: 100%;
 }
@@ -35,6 +35,7 @@ h1 {
 }
 
 .nyheder, .events, .gallery, .profiles {
+    background-color: var(--red);
     border: 2.5px solid black;
     padding: 0.4em 2.5em;
     text-align: center;
@@ -47,6 +48,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--white);
 }
 
 .box-container {
@@ -58,7 +60,7 @@ h1 {
 }
 
 .box {
-    border: 2.5px solid black;
+    border: 2.5px solid;
     width: 10em;
     height: 20rem;
     position: relative;
@@ -70,8 +72,8 @@ h1 {
     position: absolute;
     left: -1.25em;  
     bottom: -1.25em;
-    color: #686868;
-    background-color: #c8c8c8;
+    color: var(--white);
+    background-color: var(--red);
     padding: 0.5em;
     max-width: 100px;
     border-radius: 25rem;
@@ -82,8 +84,8 @@ h1 {
     margin: 0.25em;
     position: absolute;
     right: 0;  
-    color: #686868;
-    background-color: #c8c8c8bf;
+    color: var(--white);
+    background-color: var(--red);
     padding: 0.5em;
     max-width: 100px;
     border-radius: 25rem;
