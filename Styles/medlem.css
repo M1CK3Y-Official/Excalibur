@@ -86,7 +86,6 @@ h1 {
 }
 
 .info {
-    /* text-align-last: left; */
     display: grid;
     gap: 0.25em;
     font-size: 2rem;
@@ -208,6 +207,7 @@ h1 {
     }
     .edit:hover {
         background-color: #af0000;
+        cursor: pointer;
     }
     
     .medlem-info {
