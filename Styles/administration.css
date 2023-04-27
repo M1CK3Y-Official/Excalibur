@@ -41,6 +41,7 @@ h1 {
     text-align: center;
     width: 27.5rem;
     margin: 0 auto;
+    margin-bottom: 1em;
 }
 
 .nyheder, .events, .gallery, .profiles h3 {
