@@ -1,0 +1,160 @@
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: red;
+    height: 10vh;
+    max-width: 100%;
+}
+
+.logo-container {
+    height: 10vh;
+    aspect-ratio: 1/1;
+    margin: 0 2.5em;
+}
+
+.logo {
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.news-container, .events-container, .gallery-container, .profile-container {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+.nyheder, .events, .gallery, .profiles {
+    border: 2.5px solid black;
+    padding: 0.4em 2.5em;
+    text-align: center;
+    width: 27.5rem;
+    margin: 0 auto;
+}
+
+.nyheder, .events, .gallery, .profiles h3 {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container {
+    display: grid;
+    gap: 2.5em;
+    width: 50rem;
+    place-content: center;
+    margin-top: 1em;
+}
+
+.box {
+    border: 2.5px solid black;
+    width: 10em;
+    height: 20rem;
+    position: relative;
+}
+
+.fa-plus {
+    font-size: clamp(2.5rem, 2.2573rem + 1.0356vw, 3.5rem);
+    margin: 0.25em;
+    position: absolute;
+    left: -1.25em;  
+    bottom: -1.25em;
+    color: #686868;
+    background-color: #c8c8c8;
+    padding: 0.5em;
+    max-width: 100px;
+    border-radius: 25rem;
+}
+
+.fa-pen {
+    font-size: 2rem;
+    margin: 0.25em;
+    position: absolute;
+    right: 0;  
+    color: #686868;
+    background-color: #c8c8c8bf;
+    padding: 0.5em;
+    max-width: 100px;
+    border-radius: 25rem;
+}
+
+
+
+@media screen and (min-width: 768px) {        
+    .fa-pen:hover {
+        filter: brightness(0.5);
+        cursor: pointer;
+        outline: 2.5px solid black;
+    }
+
+    .fa-plus:hover {
+        filter: brightness(0.5);
+        cursor: pointer;
+        outline: 2.5px solid black;
+    }
+
+    .box-container {
+        display: grid;
+        grid-template-areas: "box box box box box";
+    }
+
+    .content-container {
+        border: 2.5px solid black;
+        width: 50%;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    .content-container .text {
+        outline: none;
+        border: none;
+        font-size: 5rem;
+    }
+
+    .content-container .text::placeholder{
+        color: grey;
+    }
+
+    .content-container .date {
+        outline: none;
+        border: none;
+        font-size: 2.5rem;
+        display: flex;
+        color: grey;
+    }
+
+    .textarea {
+        margin-top: 2em;
+        width: 60%;
+        font-size: 2rem;
+        height: 15vh;
+        padding: 0.5em;
+    }
+
+    .file-container {
+        width: 60%;
+        height: 15vh;
+        border: 1px solid black;
+        margin-top: 1.5em;
+    }
+
+    .upload {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+}
