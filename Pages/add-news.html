@@ -41,7 +41,11 @@
                 <form>    
                     <textarea class="textarea" cols="30" rows="10" placeholder="Tekst..."></textarea>
                     <div class="file-container">
-                        <input type="file" class="upload" placeholder="Upload">
+                        <label for="file-upload" class="custom-file-upload">
+                            <i class="fa-solid fa-duotone fa-cloud-arrow-up"></i>
+                            <p class="upload-text">Tryk for at vælge filer</p>
+                        </label>
+                        <input id="file-upload" type="file" accept="image/*">
                     </div>
                 </form>
             </div>
