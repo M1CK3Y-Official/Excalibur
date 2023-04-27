@@ -18,17 +18,6 @@
     align-items: start;
     gap: 1rem;
 }
-@media only screen and (max-width: 600px) {
-    .doc-right-block-bg {
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-    }
-    .doc-right-block-bg div {
-        width: 100%;
-    }
-
-}
 .doc-right-block-title {
     padding-bottom: 1rem;
     font-size: 2rem;
@@ -109,4 +98,19 @@
     text-overflow: ellipsis;
     font-weight: normal;
 }
+/*mobil settings*/
 /*================================*/
+@media only screen and (max-width: 600px) {
+
+    /*Role Block*/
+    /*================================*/
+    .doc-right-block-bg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .doc-right-block-bg div {
+        width: 100%;
+    }
+
+}

@@ -1,5 +1,9 @@
+/*loade teck*/
+/*===============================================================================*/
 console.log("shit works!");
 
+/*slider code*/
+/*===============================================================================*/
 const slider = document.querySelector(".slider");
 firstImage = slider.querySelectorAll(".skideImg")[0];
 const sliderBtns = document.querySelectorAll(".slider-btns");
@@ -66,7 +70,9 @@ firstImage.addEventListener("load", function () {
   slider.addEventListener("touchend", dragStop);
 });
 
-/*=============================================================================================*/
+/* image slider ↑  card slider ↓ */
+/*-------------------------------------------------------------------------------*/
+
 const cardSlider = document.querySelector(".doc-card-slider");
 firstCard = cardSlider.querySelectorAll(".skideCard")[0];
 const cardSliderBtns = document.querySelectorAll(".card-slider-btns");

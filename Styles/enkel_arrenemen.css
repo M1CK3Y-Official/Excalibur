@@ -1,15 +1,22 @@
+
+
+/*split Block*/
+/*================================*/
+
 section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    padding: 1rem;
 }
-.doc-block-one {
-    display: flex;
-}
+/* left (text) ↑  right (image) ↓ */
+/*--------------------------------*/
 .doc-img-banner-bg  img {
     max-height: 300px;
 }
-.doc-menu-block {
+/*menu Block*/
+/*================================*/
+.doc-menu-block { 
     margin-top: 2rem;
     width: fit-content;
     padding: 1rem;
@@ -27,8 +34,8 @@ section {
 .doc-menu-block-text {
     cursor: pointer;
 }
-
-/*=============*/
+/*all header text*/
+/*================================*/
 .doc-header-title {
     font-size: 3rem;
     padding-bottom: 1rem;
@@ -41,15 +48,16 @@ section {
     padding-top: 0.5rem;
     padding-bottom: 2rem;
 }
-
+/*mobil settings*/
+/*================================*/
 @media only screen and (max-width: 600px) {
+    /*split Block*/
+    /*================================*/
     section {
         display: flex;
         flex-direction: column-reverse;
 
     }
-    .doc-right-block {
-        padding: 1rem;
-    }
-
+    /* left (text) ↑*/
+    /*--------------------------------*/
 }
