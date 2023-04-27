@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="swiper-element-bundle.min.css">
+</head>
+    <style>
+        #myDiv {
+            overflow-x: scroll;
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            
+        }
+        .content {
+            min-height: 150px;
+            min-width: 100%;
+            background-color: #cc0000;
+            text-align: center;
+
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
+
+            
+        }
+    </style>
+<body>
+    <div id="myDiv">
+        <div class="content">Content 1</div>
+        <div class="content">Content 2</div>
+        <div class="content">Content 3</div>
+    </div>
+      
+    <button id="scrollRight">Scroll right</button>
+    <button id="scrollLeft">Scroll left</button>
+      
+    <script>
+        const myDiv = document.getElementById("myDiv");
+        const content = document.querySelectorAll(".content");
+        const contentTest = document.querySelectorAll(".content")[0];
+        const scrollLeftBtn = document.querySelector("#scrollLeft");
+        const scrollRightBtn = document.querySelector("#scrollRight");
+        /*
+        console.log(content)
+
+        content.forEach((div, index) => {
+            const contDivsWidth = div.clientWidth
+            console.log(`${index}:`, contDivsWidth);
+        })
+  
+        scrollRightBtn.addEventListener('click', () => {
+
+            let currentScroll = myDiv.scrollLeft;
+            content.forEach((div, index) => {
+                currentScroll = div.clientWidth;
+                myDiv.scrollLeft = currentScroll;
+            });
+        })
+        */
+
+        let isDragging = false; // flag to track if user is currently dragging
+        let startX; // starting x-coordinate of the drag
+        let scrollX; // starting scroll position of the drag
+        const dragThreshold = 10; // threshold to initiate the drag
+
+        // Add event listeners for mousedown and touchstart events
+        myDiv.addEventListener('mousedown', (e) => {
+            startX = e.clientX;
+            scrollX = myDiv.scrollLeft;
+            isDragging = false;
+        });
+
+        myDiv.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            scrollX = myDiv.scrollLeft;
+            isDragging = false;
+        });
+
+        // Add event listeners for mousemove and touchmove events
+        myDiv.addEventListener('mousemove', (e) => {
+        if (isDragging || Math.abs(e.clientX - startX) > dragThreshold) {
+            isDragging = true;
+            myDiv.scrollLeft = scrollX - (e.clientX - startX);
+        }
+        });
+
+        myDiv.addEventListener('touchmove', (e) => {
+        if (isDragging || Math.abs(e.touches[0].clientX - startX) > dragThreshold) {
+            console.log(Math.abs(e.touches[0].clientX - startX) > dragThreshold)
+            console.log('scrollX:', scrollX, 'startX:', startX, 'e.touches[0].clientX:', e.touches[0].clientX, 'e.touches[0].clientX - startX:', e.touches[0].clientX - startX, 'scrollX - (e.touches[0].clientX - startX):', scrollX - (e.touches[0].clientX - startX))
+            isDragging = true;
+            myDiv.scrollLeft = scrollX - (e.touches[0].clientX - startX);
+        }
+        });
+
+        // Add event listeners for mouseup and touchend events to stop dragging
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        myDiv.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // Add click event listeners for scrollLeft and scrollRight buttons
+        scrollLeftBtn.addEventListener('click', () => {
+            myDiv.scrollLeft -= content[0].clientWidth;
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            myDiv.scrollLeft += content[0].clientWidth;
+        });
+    </script>
+</body>
+</html>

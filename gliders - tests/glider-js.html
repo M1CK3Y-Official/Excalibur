@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <title>Document</title>
+    <style>
+        .glider-container {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        }
+
+        .glider {
+        display: flex;
+        flex-wrap: nowrap;
+        transition: transform 0.5s ease;
+        }
+
+        .glider img {
+        height: 300px;
+        margin-right: 10px;
+        }
+
+        .glider-prev, .glider-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        border: none;
+        background: #000;
+        font-size: 1.5em;
+        color: #fff;
+        cursor: pointer;
+        }
+
+        .glider-prev {
+        left: 0;
+        }
+
+        .glider-next {
+        right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="glider-container">
+        <div class="glider">
+            <img src="https://picsum.photos/seed/1/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/2/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/3/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/4/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/5/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/6/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/7/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/8/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/9/0/0" alt="lorem picsum image">
+            <img src="https://picsum.photos/seed/10/0/0" alt="lorem picsum image">
+        </div>
+        <button class="glider-prev">Prev</button>
+        <button class="glider-next">Next</button>
+    </div>
+
+    <script>
+        const glider = document.querySelector('.glider');
+        const prevBtn = document.querySelector('.glider-prev');
+        const nextBtn = document.querySelector('.glider-next');
+        const gliderImg = document.querySelectorAll('.glider img');
+
+        let currentIndex = 0;
+
+        nextBtn.addEventListener('click', () => {
+            const currentImg = gliderImg[currentIndex];
+            const imgWidth = currentImg.clientWidth;
+            const newPosition = currentIndex * imgWidth;
+            currentIndex++;
+            glider.style.transform = `translateX(-${newPosition}px)`;
+        });
+
+        prevBtn.addEventListener('click', () => {
+            const currentImg = gliderImg[currentIndex];
+            const imgWidth = currentImg.clientWidth;
+            const newPosition = currentIndex / imgWidth;
+            currentIndex++;
+            glider.style.transform = `translateX(-${newPosition}px)`;
+        });
+
+    </script>
+</body>
+</html>

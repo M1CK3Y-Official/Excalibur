@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .wapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .wapper .slider {
+            overflow: hidden;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+        }
+        .slider-btns {
+            margin: 1rem;
+            padding: 0 10px;
+            max-width: 50px;
+            max-height: 50px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            border-radius: 50%;
+            line-height: 50px;
+            background-color: cadetblue;
+        }
+        .slider {
+            overflow-x:visible;
+            display: flex;
+            max-width: 1200px;
+        }
+        .slider.dragging {
+            scroll-behavior: auto;
+        }
+        .slider img {
+            object-fit: cover;
+            height: 300px;
+            margin-right: 16px;
+            width: auto;
+        }
+        .slider img:last-child {
+            margin: 0;
+        }
+        @media screen and (max-width: 900px) {
+            .wapper {
+                margin: 1rem;
+            }
+            .slider img{
+                width: calc(100% / 2);
+            }
+            .slider-btns {
+                position: absolute;
+            }
+            .slider-btns.left {
+                transform: translate(-100%);
+                left: 0;
+            }
+            .slider-btns.right {
+                transform: translate(100%); 
+                right: 0;
+            }
+            .slider-btns {
+                max-width: 40px;
+                max-height: 40px;
+                font-size: 1rem;
+                padding: 5px;
+                line-height: 16px;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .slider {
+                overflow-x: hidden;
+            }
+            .slider img{
+                margin: 0;
+                width: 100%;
+            }
+            .slider-btns {
+                max-width: 40px;
+                max-height: 40px;
+                font-size: 1rem;
+                padding: 5px;
+                line-height: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="wapper">
+            <div id="left" class="slider-btns left">←</div>
+            <div class="slider">
+                <img src="https://picsum.photos/seed/1/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/2/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/3/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/4/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/5/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/6/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/7/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/8/0/0" alt="lorem picsum image">
+                <img src="https://picsum.photos/seed/9/0/0" alt="lorem picsum image">
+            </div>
+            <div id="right" class="slider-btns right">→</div>
+        </div>
+    
+        <script>
+            const slider = document.querySelector('.slider');
+            firstImage = slider.querySelectorAll('img')[0];
+            sliderBtns = document.querySelectorAll('.slider-btns');
+
+            let isDragStart = false, prevPageX, prevScrollLeft, positionDrift;
+
+
+            firstImage.addEventListener('load', function() {        
+            
+                let firstImageWidth = firstImage.clientWidth + 18
+                
+                sliderBtns.forEach(button => {
+                    button.addEventListener('click', function(){ 
+                        if(button.id == "left"){
+                            slider.scrollLeft -= firstImageWidth;
+                        } else {
+                            slider.scrollLeft += firstImageWidth;
+                        }
+                    });
+                }); 
+
+                const autoSlide = () => {
+                    positionDrift = Math.abs(positionDrift);
+                    let firstImageWidth = firstImage.clientWidth
+                    let valDifference = firstImageWidth - positionDrift;
+
+                    if(positionDrift > firstImageWidth / 2){
+                        slider.scrollLeft += valDifference;
+                    } else {
+                        slider.scrollLeft -= valDifference;
+                    }
+                }
+
+                const dragStart = (e) => {
+                    isDragStart = true;
+                    prevPageX = e.pageX || e.touches[0].pageX;
+                    prevScrollLeft = slider.scrollLeft;
+                }
+
+                const dragging = (e) => {
+                    if(!isDragStart) return;
+                    e.preventDefault()
+                    slider.classList.add('dragging');
+                    positionDrift = (e.pageX || e.touches[0].pageX) - prevPageX;
+                    slider.scrollLeft = prevScrollLeft - positionDrift;
+                }
+
+                const dragStop = () => {
+                    isDragStart = false;
+                    slider.classList.remove('dragging');
+                    autoSlide()
+                }
+
+                slider.addEventListener('mousedown', dragStart);
+                slider.addEventListener('mousemove', dragging);
+                slider.addEventListener('mouseup', dragStop);
+                slider.addEventListener('mouseleave', dragStop);
+
+                slider.addEventListener('touchstart', dragStart);
+                slider.addEventListener('touchmove', dragging);
+                slider.addEventListener('touchend', dragStop);
+            });
+
+
+        </script>
+</body>
+</html>

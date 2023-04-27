@@ -1,0 +1,30 @@
+/*Defult settings*/
+/*===============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+html, body {
+    height: 100%;
+}
+header {
+    margin-bottom: 2rem;
+    min-height: 10vh;
+    background-color: rgb(39, 44, 49);
+}
+footer {
+    margin-top: 4rem;
+    min-height: 60vh;
+    background-color: rgb(39, 44, 49);
+}
+main {
+    max-width: 1000px;
+    margin: auto;
+}

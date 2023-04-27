@@ -1,27 +1,5 @@
-/*Defult settings*/
-/*===============================*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-header {
-    min-height: 10vh;
-    background-color: rgb(43, 43, 43);
-}
-footer {
-    min-height: 60vh;
-    background-color: rgb(43, 43, 43);
-}
-main {
-    max-width: 1000px;
-    margin: auto;
-}
+
+/*title Block*/
 /*===============================*/
 .doc-header-bg {
     padding: 4rem 1rem;
@@ -85,7 +63,7 @@ main {
     align-items: center;
 }
 .doc-role-card-bg {
-    padding: 1rem 1rem 6rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
