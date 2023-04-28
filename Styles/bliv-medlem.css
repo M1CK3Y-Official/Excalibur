@@ -1,0 +1,121 @@
+header {
+    background-color: red;
+    height: 10vh;
+    max-width: 100%;
+}
+
+.logo-container {
+    height: 10vh;
+    aspect-ratio: 1/1;
+    margin: 0 2.5em;
+}
+
+.logo {
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.login-page {
+    height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    "existing"
+    "register";
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.existing {
+    grid-area: 'existing';
+}
+
+.login {
+    font-size: 2.5rem;
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 25rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: red;
+    border: 2px black solid;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+
+
+.newuser {
+    height: 50vh;
+    display: grid;
+    place-content: center;
+    width: 100%;
+}
+
+.register {
+    display: grid;
+    gap: 2em;
+    grid-area: 'register';
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 70vw;
+    font-size: 2.5rem;
+    padding: 0.5em 0.5em;
+    border-radius: 25rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: red;
+    border: 2px black solid;
+    color: black;
+}
+
+input[type=email], input[type=password] {
+    background-color: #fff;
+}
+
+input[type=submit] {
+    color: white;
+}
+
+
+
+@media screen and (min-width: 768px) {    
+    .login-page {
+        grid-template-areas: "existing register";
+        gap: 10em;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background-color: #af0000;
+    }
+    
+    input {
+        width: 30vw;
+    }
+    
+    input[type=submit]:hover {
+        background-color: rgb(175, 0, 0);
+        cursor: pointer;
+    }
+}

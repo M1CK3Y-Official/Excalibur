@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/add-news.css">
+    <script src="https://kit.fontawesome.com/d3366c6752.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../img/hvidlogo.svg" type="image/x-icon">
+
+    <title>Tilføj Nyhed - Excalibur</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="../index.html"><img src="../img/hvidlogo.svg" alt="Logo" class="logo"></a>
+        </div>
+    </header>
+
+    <h1 class="headline">Tilføj Nyheder</h1>
+
+    <main>
+
+        <section class="admin-panel">
+            <div class="news-container">
+                <div class="nyheder">
+                    <h3>Rediger</h3>
+                </div>
+                <div class="box-container">
+                    <div class="box"><i class="fa-solid fa-plus"></i></div>
+                    <div class="box"><i class="fa-solid fa-pen"></i></div>
+                    <div class="box"><i class="fa-solid fa-pen"></i></div>
+                    <div class="box"><i class="fa-solid fa-pen"></i></div>
+                    <div class="box"><i class="fa-solid fa-pen"></i></div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <input type="text" placeholder="Titel..." class="text"></input>
+
+                <p class="date-label">Dato</p>
+                <input type="date" class="date"></input>
+
+                <form>    
+                    <textarea class="textarea" cols="30" rows="10" placeholder="Tekst..."></textarea>
+                    <div class="file-container">
+                        <label for="file-upload" class="custom-file-upload">
+                            <i class="fa-solid fa-duotone fa-cloud-arrow-up"></i>
+                            <p class="upload-text">Tryk for at vælge filer</p>
+                        </label>
+                        <input id="file-upload" type="file" accept="image/*">
+                    </div>
+                </form>
+                <i class="fa-solid fa-check"></i>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

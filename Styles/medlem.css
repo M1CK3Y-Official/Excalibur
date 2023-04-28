@@ -1,0 +1,279 @@
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+main {
+    margin-top: 1em;
+}
+
+header {
+    background-color: var(--red);
+    height: 10vh;
+    max-width: 100%;
+}
+
+.logo-container {
+    height: 10vh;
+    aspect-ratio: 1/1;
+    margin: 0 2.5em;
+}
+
+.logo {
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.medlem {
+    display: grid;
+    text-align: center;
+    place-content: center;
+    min-height: auto;
+    grid-area: 'medlem';
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 0.5em;
+}
+
+.profil {
+    border: 2.5px solid black;
+    aspect-ratio: 1/1;
+    display: block;
+    position: relative;
+}
+
+.fa-user {
+    font-size: clamp(25rem, 18.932rem + 25.89vw, 50rem);
+    padding: 5rem 5rem 0 5rem;
+    color: #c8c8c8;
+}
+
+.fa-pen {
+    font-size: clamp(1.5rem, 1.0146rem + 2.0712vw, 3.5rem);
+    margin: 0.25em;
+    position: absolute;
+    right: 0;  
+    color: var(--white);
+    background-color: var(--red);
+    padding: 0.5em;
+    max-width: 100px;
+    border-radius: 25rem;
+}
+
+.navn-container {
+    border: 2.5px solid black;
+    border-top: none;
+    padding: 1em;
+}
+
+.edit {
+    padding: 0.5em;
+    background-color: var(--red);
+    font-size: 2rem;
+    font-weight:700;
+    color: white;
+    outline: none;
+    border: none;
+    margin-bottom: 2.5em;
+    border-radius: 25rem;
+}
+
+.medlem-info {
+    margin-top: 2em;
+}
+
+.info {
+    display: grid;
+    gap: 0.25em;
+    font-size: 2rem;
+}
+
+.sec-2 {
+    grid-area: 'events';
+}
+
+.news-container {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
+.nyheder {
+    border: 2.5px solid black;
+    padding: 0.4em 2.5em;
+    text-align: center;
+    width: 27.5rem;
+    margin: 0 auto;
+    background-color: var(--red);
+    color: var(--white);
+    margin-bottom: 1em;
+}
+
+.nyheder h3 {
+    font-size: 2.5rem;
+}
+
+.box-container {
+    display: grid;
+    gap: 2.5em;
+    width: 50rem;
+    place-content: center;
+    margin-top: 1em;
+}
+
+.box {
+    border: 2.5px solid black;
+    width: 10em;
+    height: 20rem;
+}
+
+
+.events-container {
+    display: grid;
+    justify-content: center;
+    margin-top: 3em;
+    grid-template-areas: 
+    ". news .",
+    "box box box";
+    margin-bottom: 2.5em;
+}
+
+.events {
+    border: 2.5px solid black;
+    padding: 0.4em 2.5em;
+    text-align: center;
+    width: 27.5rem;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.events h3 {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tilmeld {
+    display: flex;
+    align-items: flex-end;
+}
+
+.signup {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--red);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 0.25em;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.signedup {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.box-e {
+    border: 2.5px solid black;
+    width: 10em;
+    height: 20rem;
+    position: relative;
+}
+
+
+@media screen and (min-width: 768px) {        
+    .fa-pen:hover {
+        filter: brightness(0.5);
+        cursor: pointer;
+        outline: 2.5px solid black;
+    }
+    
+    main {
+        display: grid;
+        grid-template-areas: 
+        "medlem events";
+    }
+
+    .edit {
+        text-align: center;
+        width: 100%;
+        margin-top: 1em;
+    }
+    .edit:hover {
+        background-color: var(--red-hover);
+        cursor: pointer;
+    }
+    
+    .medlem-info {
+        margin-top: 2em;
+    }
+    
+    .info p {
+        display: flex;
+        justify-content: space-between;
+        border: 2.5px solid black;   
+    }
+
+    .info p b {
+        padding-left: 0.5em;
+    }
+
+    .info-container {
+        display: grid;
+        gap: 1em;
+    }
+
+    .info p span {
+        width: 50%;
+        text-align: left;
+        background-color: #ddd;
+        outline: 2.5px solid black;
+        padding: 0 0.5em;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .news-container {
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        ". news .",
+        "box box box";
+    }
+
+    .box-container {
+        display: grid;
+        grid-template-areas: "box box box";
+    }
+    
+    .events-container {
+        display: grid;
+        justify-content: center;
+        /* margin-top: 5em; */
+        grid-template-areas: 
+        ". news .",
+        "box box box";
+    }
+
+    .signup:hover {
+        background-color: var(--red-hover);
+        cursor: pointer;
+    }
+
+    .signedup:hover {
+        background-color: #aaa;
+    }
+}
