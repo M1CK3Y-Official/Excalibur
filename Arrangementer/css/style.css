@@ -3,6 +3,18 @@
     margin: 0;
     padding: 0;
 }
+
+nav{
+    background-color: red;
+    height: 10vh;
+}
+
+nav img{
+    width: 60px;
+    height: 10vh;
+    margin: 0 2.5em;
+}
+
 html{
     font-size: 62.5%;
 }
