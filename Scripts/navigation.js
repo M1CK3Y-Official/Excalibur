@@ -26,7 +26,11 @@ let linksArr = [
     },
     {
         link : '../pages/medlem.html',
-        title : ''
+        title : 'Profil'
+    },
+    {
+        link : '../pages/karakter-side.html',
+        title : 'Karakter side'
     }
 ]
 
