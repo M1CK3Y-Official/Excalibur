@@ -3,6 +3,13 @@
 main {
     max-width: 3160px;
 }
+
+header img{
+    width: 60px;
+    height: 10vh;
+    margin: 0 2.5em;
+}
+
 /*title Block*/
 /*===============================*/
 .doc-header-bg {
