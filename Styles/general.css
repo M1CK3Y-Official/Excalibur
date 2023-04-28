@@ -32,9 +32,11 @@ header {
     height: 10vh;
     aspect-ratio: 1/1;
     margin: 0 2.5em;
+    padding: 0.5rem 0;
 }
 
 .logo {
+    object-fit: contain;
     aspect-ratio: 1/1;
     width: 100%;
 }
