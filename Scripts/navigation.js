@@ -21,7 +21,7 @@ let linksArr = [
         title : 'Home'
     },
     {
-        link : '#about',
+        link : '#../pages/bliv-medlem.html',
         title : 'About'
     },
     {
