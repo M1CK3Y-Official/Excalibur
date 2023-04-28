@@ -21,13 +21,38 @@ let linksArr = [
         title : 'Home'
     },
     {
-        link : '#../pages/bliv-medlem.html',
-        title : 'About'
+        link : '../pages/bliv-medlem.html',
+        title : 'Login'
     },
     {
-        link : '#contact',
-        title : 'Contact'
+        link : '../pages/medlem.html',
+        title : 'Profil'
+    },
+    {
+        link : '../pages/karakter-side.html',
+        title : 'Karakter side'
+    },
+    {
+        link : '../pages/til_forældre.html',
+        title : 'Forældreinfo'
+    },
+    {
+        link : '../pages/add-events.html',
+        title : 'Tilføj Arrangementer'
+    },
+    {
+        link : '../pages/add-news.html',
+        title : 'Tilføj Nyheder'
+    },
+    {
+        link : '../pages/administration.html',
+        title : 'Administration'
+    },
+    {
+        link : '../pages/galleri_1.html',
+        title : 'Galleri'
     }
+    
 ]
 
 

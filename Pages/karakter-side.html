@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Styles/karakter-side.css" />
     <link rel="stylesheet" href="../Styles/general.css" />
+    <link rel="stylesheet" href="../Styles/navigation.css" />
+    <script src="../scripts/navigation.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,15 +16,18 @@
   </head>
   <body>
     <header>
-      <img src="img/hvidlogo.svg" alt=""/>
-    </header>
+      <div id="nav-container"></div>
+      <div class="logo-container">
+          <a href="../index.html"><img src="../img/hvidlogo.svg" alt="Logo" class="logo"></a>
+      </div>
+  </header>
     <main>
         <div class="grid-template">
           <div class="profile-strength">
       <div class="profile">
         <img
           class="profilpic"
-          src="img/elver archer.jpg"
+          src="../img/elver archer.jpg"
           alt=""
           width="300px"
         />
