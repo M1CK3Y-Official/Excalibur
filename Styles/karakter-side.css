@@ -17,6 +17,7 @@ main{
 .profile{
     width: 300px;
     margin: 0;
+    text-align: center;
 }
 
 .profilpic{
@@ -49,6 +50,8 @@ margin-top: 30px;
     justify-content: center;
     width: 50%;
     margin-top: 1em;
+    background-color: red;
+    color: white;
 }
 
 .grid-area div{
