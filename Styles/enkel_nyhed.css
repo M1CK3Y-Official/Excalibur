@@ -1,0 +1,59 @@
+/*title Block*/
+/*===============================*/
+.doc-header-title {
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+/*Right Block*/
+/*===============================*/
+.doc-right-block-bg {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+}
+.doc-right-block-title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+.doc-right-block-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 250px;
+    -webkit-line-clamp: 12;
+    overflow: hidden;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+/*Image Banner Block*/
+/*================================*/
+.doc-img-banner-bg {
+    margin: 1rem;
+
+}
+.doc-img-banner-bg img {
+    max-height: 300px;
+    display: block;
+}
+/*mobil settings*/
+/*================================*/
+@media only screen and (max-width: 600px) {
+
+    /*Right Block*/
+    /*===============================*/
+    .doc-right-block-bg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .doc-right-block-bg div {
+        width: 100%;
+    }
+
+}
