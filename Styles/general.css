@@ -1,27 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-<<<<<<< HEAD
-=======
 :root {
-    --red: #f00;
-    --red-hover: #af0000;
-    --white: #fff;
+  --red: #f00;
+  --red-hover: #af0000;
+  --white: #fff;
 }
 
->>>>>>> ac94ecea9722dc41559c155e09a20f0a208e414f
-*{
-    font-family: 'Poppins';
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins';
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
 
-html{
-font-size: 0.625rem;
+html {
+  font-size: 0.625rem;
 }
 
-body{
-font-size: 1.6rem;
+body {
+  font-size: 1.6rem;
 }
- 
