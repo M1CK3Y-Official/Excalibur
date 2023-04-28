@@ -1,0 +1,79 @@
+.navigation {
+    position: fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), #ff0000ee);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: -100vw;
+    transition: left;
+    transition-duration: 0.75s;
+    z-index: 90;
+}
+
+.menu-title {
+    text-align: center;
+    font-size:70px;
+    font-weight: 800;
+    margin: 20px;
+    margin-top: 50px;
+    color: #eee;
+    text-shadow: 5px 5px 5px black;
+}
+
+.menus {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    /* padding-top: 20px; */
+    gap: 20px;
+    text-shadow: 2.5px 2.5px 5px black;
+}
+
+.menus a{
+    line-height: 80px;
+    text-decoration: none;
+    color: #eee;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 10px;
+    cursor: default;
+}
+
+.menus a:hover {
+    /* color: rgb(0, 0, 0); */
+    color: var(--red-hover);
+    text-shadow: 2.5px 2.5px 5px darkred;
+    cursor: pointer;
+}
+
+.navigation.active {
+    left: 0;
+    /* top: 50px; */
+}
+
+.navigationHandle {
+    font-size: 35px;
+    margin-top: 0.5em;
+    position: absolute;
+    right: 0;
+    margin-right: 2.5em;
+    z-index: 100;
+    /* top: 10px; */
+    /* color: #000; */
+    color: var(--white);
+    transition: text-shadow, color;
+    transition-duration: 0.5s;
+}
+
+.navigationHandle:hover {
+    /* color: rgb(0, 0, 0); */
+    color: var(--red-hover);
+    text-shadow: 2.5px 2.5px 5px black;
+    cursor: pointer;
+}

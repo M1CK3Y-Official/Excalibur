@@ -7,23 +7,6 @@ main {
     margin-top: 1em;
 }
 
-header {
-    background-color: var(--red);
-    height: 10vh;
-    max-width: 100%;
-}
-
-.logo-container {
-    height: 10vh;
-    aspect-ratio: 1/1;
-    margin: 0 2.5em;
-}
-
-.logo {
-    aspect-ratio: 1/1;
-    width: 100%;
-}
-
 .medlem {
     display: grid;
     text-align: center;
