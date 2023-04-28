@@ -21,12 +21,12 @@ let linksArr = [
         title : 'Home'
     },
     {
-        link : '#../pages/bliv-medlem.html',
-        title : 'About'
+        link : '../pages/bliv-medlem.html',
+        title : 'Login'
     },
     {
-        link : '#contact',
-        title : 'Contact'
+        link : '../pages/medlem.html',
+        title : ''
     }
 ]
 
