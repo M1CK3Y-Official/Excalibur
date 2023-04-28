@@ -19,7 +19,7 @@
     gap: 1rem;
 }
 .doc-right-block-title {
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     font-size: 2rem;
 }
 .doc-right-block-text {
