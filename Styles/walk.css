@@ -1,0 +1,22 @@
+/* ===== BASE SITE CSS START ===== */
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+/* ===== BASE SITE CSS END ===== */
+
+body {
+    width: 100%;
+        height: 10000px;
+        background-image: url('/img/excalibur.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      canvas {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
