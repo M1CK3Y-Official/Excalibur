@@ -51,6 +51,14 @@ let linksArr = [
     {
         link : '../pages/galleri_1.html',
         title : 'Galleri'
+    },
+    {
+        link : '../pages/enkel_nyhed.html',
+        title : 'Nyhed'
+    },
+    {
+        link : '../pages/enkel_arrenement.html',
+        title : 'Arrangement'
     }
     
 ]
